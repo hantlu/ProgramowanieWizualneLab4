@@ -31,5 +31,31 @@ namespace ProgramowanieWizualneLab4
                 }
             }
         }
+
+        private void only_green_Click(object sender, EventArgs e)
+        {
+            if (image.Image != null)
+            {
+                Bitmap bitmap = new Bitmap(image.Image);
+
+                for (int i = 0; i < bitmap.Width; i++)
+                {
+                    for (int j = 0; j < bitmap.Height; j++) 
+                    { 
+                        Color pixelColor = bitmap.GetPixel(i, j);
+
+                        if (pixelColor.G <= pixelColor.R || pixelColor.G <= pixelColor.R)
+                        {
+                            bitmap.SetPixel(i, j, Color.Black);
+                        }
+                    }
+                }
+                image.Image = bitmap;
+            }
+            else
+            {
+                MessageBox.Show("Nie zaladowales zdjecia!", "Blad!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
     }
 }

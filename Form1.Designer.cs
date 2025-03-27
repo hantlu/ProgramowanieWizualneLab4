@@ -31,6 +31,7 @@
             this.image = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.load = new System.Windows.Forms.Button();
+            this.only_green = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +57,22 @@
             this.load.UseVisualStyleBackColor = true;
             this.load.Click += new System.EventHandler(this.load_Click);
             // 
+            // only_green
+            // 
+            this.only_green.Location = new System.Drawing.Point(31, 269);
+            this.only_green.Name = "only_green";
+            this.only_green.Size = new System.Drawing.Size(190, 63);
+            this.only_green.TabIndex = 2;
+            this.only_green.Text = "Only Green";
+            this.only_green.UseVisualStyleBackColor = true;
+            this.only_green.Click += new System.EventHandler(this.only_green_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 465);
+            this.Controls.Add(this.only_green);
             this.Controls.Add(this.load);
             this.Controls.Add(this.image);
             this.Name = "Form1";
@@ -75,6 +87,7 @@
         private System.Windows.Forms.PictureBox image;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button load;
+        private System.Windows.Forms.Button only_green;
     }
 }
 
