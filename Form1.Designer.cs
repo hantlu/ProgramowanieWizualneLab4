@@ -31,6 +31,10 @@
             this.image = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.load = new System.Windows.Forms.Button();
+            this.dziewiec = new System.Windows.Forms.RadioButton();
+            this.osiemnascie = new System.Windows.Forms.RadioButton();
+            this.dwadziescia_siedem = new System.Windows.Forms.RadioButton();
+            this.rotate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,17 +60,65 @@
             this.load.UseVisualStyleBackColor = true;
             this.load.Click += new System.EventHandler(this.load_Click);
             // 
+            // dziewiec
+            // 
+            this.dziewiec.AutoSize = true;
+            this.dziewiec.Location = new System.Drawing.Point(44, 41);
+            this.dziewiec.Name = "dziewiec";
+            this.dziewiec.Size = new System.Drawing.Size(81, 20);
+            this.dziewiec.TabIndex = 2;
+            this.dziewiec.TabStop = true;
+            this.dziewiec.Text = "90 stopni";
+            this.dziewiec.UseVisualStyleBackColor = true;
+            // 
+            // osiemnascie
+            // 
+            this.osiemnascie.AutoSize = true;
+            this.osiemnascie.Location = new System.Drawing.Point(44, 81);
+            this.osiemnascie.Name = "osiemnascie";
+            this.osiemnascie.Size = new System.Drawing.Size(88, 20);
+            this.osiemnascie.TabIndex = 3;
+            this.osiemnascie.TabStop = true;
+            this.osiemnascie.Text = "180 stopni";
+            this.osiemnascie.UseVisualStyleBackColor = true;
+            // 
+            // dwadziescia_siedem
+            // 
+            this.dwadziescia_siedem.AutoSize = true;
+            this.dwadziescia_siedem.Location = new System.Drawing.Point(44, 119);
+            this.dwadziescia_siedem.Name = "dwadziescia_siedem";
+            this.dwadziescia_siedem.Size = new System.Drawing.Size(88, 20);
+            this.dwadziescia_siedem.TabIndex = 4;
+            this.dwadziescia_siedem.TabStop = true;
+            this.dwadziescia_siedem.Text = "270 stopni";
+            this.dwadziescia_siedem.UseVisualStyleBackColor = true;
+            // 
+            // rotate
+            // 
+            this.rotate.Location = new System.Drawing.Point(44, 160);
+            this.rotate.Name = "rotate";
+            this.rotate.Size = new System.Drawing.Size(177, 64);
+            this.rotate.TabIndex = 5;
+            this.rotate.Text = "Rotate";
+            this.rotate.UseVisualStyleBackColor = true;
+            this.rotate.Click += new System.EventHandler(this.rotate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 465);
+            this.Controls.Add(this.rotate);
+            this.Controls.Add(this.dwadziescia_siedem);
+            this.Controls.Add(this.osiemnascie);
+            this.Controls.Add(this.dziewiec);
             this.Controls.Add(this.load);
             this.Controls.Add(this.image);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -75,6 +127,10 @@
         private System.Windows.Forms.PictureBox image;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button load;
+        private System.Windows.Forms.RadioButton dziewiec;
+        private System.Windows.Forms.RadioButton osiemnascie;
+        private System.Windows.Forms.RadioButton dwadziescia_siedem;
+        private System.Windows.Forms.Button rotate;
     }
 }
 
