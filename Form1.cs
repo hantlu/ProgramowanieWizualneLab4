@@ -15,6 +15,21 @@ namespace ProgramowanieWizualneLab4
         public Form1()
         {
             InitializeComponent();
+            image.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void load_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Wybierz obraz";
+                openFileDialog.Filter = "Pliki graficzne|*.jpg;*.jpeg;*.png;*.bmp|Wszystkie pliki|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    image.Image = Image.FromFile(openFileDialog.FileName);
+                }
+            }
         }
     }
 }
