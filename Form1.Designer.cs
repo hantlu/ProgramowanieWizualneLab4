@@ -35,6 +35,8 @@
             this.osiemnascie = new System.Windows.Forms.RadioButton();
             this.dwadziescia_siedem = new System.Windows.Forms.RadioButton();
             this.rotate = new System.Windows.Forms.Button();
+            this.invert = new System.Windows.Forms.Button();
+            this.flip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,19 +97,40 @@
             // 
             // rotate
             // 
-            this.rotate.Location = new System.Drawing.Point(44, 160);
+            this.rotate.Location = new System.Drawing.Point(31, 160);
             this.rotate.Name = "rotate";
-            this.rotate.Size = new System.Drawing.Size(177, 64);
+            this.rotate.Size = new System.Drawing.Size(190, 64);
             this.rotate.TabIndex = 5;
             this.rotate.Text = "Rotate";
             this.rotate.UseVisualStyleBackColor = true;
             this.rotate.Click += new System.EventHandler(this.rotate_Click);
+            // 
+            // invert
+            // 
+            this.invert.Location = new System.Drawing.Point(31, 241);
+            this.invert.Name = "invert";
+            this.invert.Size = new System.Drawing.Size(190, 63);
+            this.invert.TabIndex = 6;
+            this.invert.Text = "Invert Colors";
+            this.invert.UseVisualStyleBackColor = true;
+            this.invert.Click += new System.EventHandler(this.invert_Click);
+            // 
+            // flip
+            // 
+            this.flip.Location = new System.Drawing.Point(31, 310);
+            this.flip.Name = "flip";
+            this.flip.Size = new System.Drawing.Size(190, 46);
+            this.flip.TabIndex = 7;
+            this.flip.Text = "Upside Down";
+            this.flip.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 465);
+            this.Controls.Add(this.flip);
+            this.Controls.Add(this.invert);
             this.Controls.Add(this.rotate);
             this.Controls.Add(this.dwadziescia_siedem);
             this.Controls.Add(this.osiemnascie);
@@ -131,6 +154,8 @@
         private System.Windows.Forms.RadioButton osiemnascie;
         private System.Windows.Forms.RadioButton dwadziescia_siedem;
         private System.Windows.Forms.Button rotate;
+        private System.Windows.Forms.Button invert;
+        private System.Windows.Forms.Button flip;
     }
 }
 

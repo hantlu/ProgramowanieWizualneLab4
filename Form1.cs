@@ -60,5 +60,10 @@ namespace ProgramowanieWizualneLab4
                 MessageBox.Show("Brak obrazka!", "Blad!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
+
+        private void invert_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
