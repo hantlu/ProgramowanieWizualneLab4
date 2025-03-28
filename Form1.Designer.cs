@@ -123,6 +123,7 @@
             this.flip.TabIndex = 7;
             this.flip.Text = "Upside Down";
             this.flip.UseVisualStyleBackColor = true;
+            this.flip.Click += new System.EventHandler(this.flip_Click);
             // 
             // Form1
             // 

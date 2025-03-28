@@ -63,7 +63,42 @@ namespace ProgramowanieWizualneLab4
 
         private void invert_Click(object sender, EventArgs e)
         {
+            if (image.Image != null)
+            {
+                Bitmap bitmap = new Bitmap(image.Image);
 
+                for (int i = 0; i < bitmap.Width; i++)
+                {
+                    for (int j = 0; j < bitmap.Height; j++)
+                    {
+                        Color pixelColor = bitmap.GetPixel(i, j);
+
+                        int invertedR = 255 - pixelColor.R;
+                        int invertedG = 255 - pixelColor.G;
+                        int invertedB = 255 - pixelColor.B;
+
+                        Color invertedColor = Color.FromArgb(invertedR, invertedG, invertedB);
+                        bitmap.SetPixel(i, j, invertedColor);
+
+                    }
+                }
+                image.Image = bitmap;
+            }
+            else
+                MessageBox.Show("Brak obrazka", "Blad", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+        }
+
+        private void flip_Click(object sender, EventArgs e)
+        {
+            if (image.Image != null)
+            {
+                Bitmap bitmap = new Bitmap(image.Image);
+
+                bitmap.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                image.Image = bitmap;
+            }
+            else
+                MessageBox.Show("Nie zaladowano obrazka!", "Blad!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
     }
 }
