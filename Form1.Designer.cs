@@ -37,14 +37,15 @@
             this.rotate = new System.Windows.Forms.Button();
             this.invert = new System.Windows.Forms.Button();
             this.flip = new System.Windows.Forms.Button();
+            this.only_green = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
             // image
             // 
-            this.image.Location = new System.Drawing.Point(295, 41);
+            this.image.Location = new System.Drawing.Point(282, 41);
             this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(288, 387);
+            this.image.Size = new System.Drawing.Size(301, 429);
             this.image.TabIndex = 0;
             this.image.TabStop = false;
             // 
@@ -54,9 +55,9 @@
             // 
             // load
             // 
-            this.load.Location = new System.Drawing.Point(31, 362);
+            this.load.Location = new System.Drawing.Point(31, 428);
             this.load.Name = "load";
-            this.load.Size = new System.Drawing.Size(190, 66);
+            this.load.Size = new System.Drawing.Size(190, 56);
             this.load.TabIndex = 1;
             this.load.Text = "Load";
             this.load.UseVisualStyleBackColor = true;
@@ -97,9 +98,9 @@
             // 
             // rotate
             // 
-            this.rotate.Location = new System.Drawing.Point(31, 160);
+            this.rotate.Location = new System.Drawing.Point(31, 167);
             this.rotate.Name = "rotate";
-            this.rotate.Size = new System.Drawing.Size(190, 64);
+            this.rotate.Size = new System.Drawing.Size(190, 61);
             this.rotate.TabIndex = 5;
             this.rotate.Text = "Rotate";
             this.rotate.UseVisualStyleBackColor = true;
@@ -107,9 +108,9 @@
             // 
             // invert
             // 
-            this.invert.Location = new System.Drawing.Point(31, 241);
+            this.invert.Location = new System.Drawing.Point(31, 243);
             this.invert.Name = "invert";
-            this.invert.Size = new System.Drawing.Size(190, 63);
+            this.invert.Size = new System.Drawing.Size(190, 54);
             this.invert.TabIndex = 6;
             this.invert.Text = "Invert Colors";
             this.invert.UseVisualStyleBackColor = true;
@@ -117,7 +118,7 @@
             // 
             // flip
             // 
-            this.flip.Location = new System.Drawing.Point(31, 310);
+            this.flip.Location = new System.Drawing.Point(31, 366);
             this.flip.Name = "flip";
             this.flip.Size = new System.Drawing.Size(190, 46);
             this.flip.TabIndex = 7;
@@ -125,17 +126,28 @@
             this.flip.UseVisualStyleBackColor = true;
             this.flip.Click += new System.EventHandler(this.flip_Click);
             // 
+            // only_green
+            // 
+            this.only_green.Location = new System.Drawing.Point(31, 303);
+            this.only_green.Name = "only_green";
+            this.only_green.Size = new System.Drawing.Size(190, 50);
+            this.only_green.TabIndex = 2;
+            this.only_green.Text = "Only Green";
+            this.only_green.UseVisualStyleBackColor = true;
+            this.only_green.Click += new System.EventHandler(this.only_green_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 465);
+            this.ClientSize = new System.Drawing.Size(613, 514);
             this.Controls.Add(this.flip);
             this.Controls.Add(this.invert);
             this.Controls.Add(this.rotate);
             this.Controls.Add(this.dwadziescia_siedem);
             this.Controls.Add(this.osiemnascie);
             this.Controls.Add(this.dziewiec);
+            this.Controls.Add(this.only_green);
             this.Controls.Add(this.load);
             this.Controls.Add(this.image);
             this.Name = "Form1";
@@ -157,6 +169,8 @@
         private System.Windows.Forms.Button rotate;
         private System.Windows.Forms.Button invert;
         private System.Windows.Forms.Button flip;
+
+        private System.Windows.Forms.Button only_green;
     }
 }
 

@@ -88,6 +88,31 @@ namespace ProgramowanieWizualneLab4
                 MessageBox.Show("Brak obrazka", "Blad", MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
 
+        private void only_green_Click(object sender, EventArgs e)
+        {
+            if (image.Image != null)
+            {
+                Bitmap bitmap = new Bitmap(image.Image);
+
+                for (int i = 0; i < bitmap.Width; i++)
+                {
+
+                    for (int j = 0; j < bitmap.Height; j++) 
+                    { 
+                        Color pixelColor = bitmap.GetPixel(i, j);
+
+                        if (pixelColor.G <= pixelColor.R || pixelColor.G <= pixelColor.R)
+                        {
+                            bitmap.SetPixel(i, j, Color.Black);
+                        }
+                    }
+                }
+                image.Image = bitmap;
+            }
+            else
+                MessageBox.Show("Brak obrazka", "Blad", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+        }
+
         private void flip_Click(object sender, EventArgs e)
         {
             if (image.Image != null)
@@ -99,6 +124,7 @@ namespace ProgramowanieWizualneLab4
             }
             else
                 MessageBox.Show("Nie zaladowano obrazka!", "Blad!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
         }
     }
 }
